@@ -134,30 +134,22 @@ p.text1 {
 html{
   block-size:100%;
   background-color:var(--bg);
-  color:var(--text1)
+  color:var(--text1);
 
 }
 body{
-  min-block-size:100%;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-  padding:5vmax;
-  display:grid;
-  align-content:center;
-  justify-content:center;
-  place-content:center;
-  gap:2vmax;
 }
 main{
-  display:flex;
-  flex-flow:row wrap;
-  align-items:center;
-  align-content:center;
-  justify-content:center;
-  gap:10vmax 10vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section{
-  display:grid;
-  gap:2.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h1{font-weight:100}
 p{max-inline-size:35ch;font-size:1.25rem;line-height:1.5}
@@ -165,7 +157,7 @@ header{display:inline-grid;gap:1ch}
 form{display:flex;gap:2ch}
 form>div{display:inline-flex;align-items:center;gap:.75ch}
 .text-samples{display:grid;gap:1.5ch}
-.text-samples>h1{font-size:2.5rem;display:inline-flex;align-items:center;gap:1ch}
+.text-samples>h1{font-size:2.5rem;}
 .brand{color:var(--brand);background-color:var(--brand)}
 .bg{background-color:var(--bg);color:var(--text2)}
 .text1{color:var(--text1)}
@@ -174,3 +166,18 @@ p.text1{font-weight:200}
 .sample{display:inline-block;flex-shrink:0;inline-size:1.5ch;block-size:1.5ch;border-radius:50%}
 .sample.text1{background-color:var(--text1)}
 .sample.text2{background-color:var(--text2)}
+
+.swatches__container {
+  gap: 1rem;
+}
+
+.swatches {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.swatches > .sample {
+  background-color: red;
+}
